@@ -41,43 +41,56 @@
         <form class="feedback__form" name="feedback" method="GET" action="https://echo.htmlacademy.ru/" target="_blank">
           <fieldset class="feedback__section feedback__section--name">
             <legend class="feedback__section-name">Представьтесь</legend>
-            <label class="feedback__fild-name">Имя*:
-              <input class="feedback__field" type="text" name="name" placeholder="Петр">
+            <label class="feedback__field-name">Имя*:
+              <input class="feedback__field" type="text" name="name" placeholder="Петр" required>
             </label>
-            <label class="feedback__fild-name">Фамилия*:
-              <input class="feedback__field" type="text" name="surname" placeholder="Иванов">
+            <label class="feedback__field-name">Фамилия*:
+              <input class="feedback__field" type="text" name="surname" placeholder="Иванов" required>
             </label>
-            <label class="feedback__fild-name">Отчество:
+            <label class="feedback__field-name">Отчество:
               <input class="feedback__field" type="text" name="patronym" placeholder="Александрович">
             </label>
           </fieldset>
           <fieldset class="feedback__section feedback__section--contact-info">
             <legend class="feedback__section-name">Контактная информация:</legend>
-            <label class="feedback__fild-name">Контактный телефон*:
-              <input class="feedback__field" type="tel" name="phone-number" placeholder="Введите телфон">
+            <label class="feedback__field-name">Контактный телефон*:
+              <input class="feedback__field" type="tel" name="phone-number" placeholder="Введите телфон" required>
             </label>
-            <label class="feedback__fild-name">Электронная почта*:
-              <input class="feedback__field" type="email" name="e-mail" placeholder="Введите e-mail">
+            <label class="feedback__field-name">Электронная почта*:
+              <input class="feedback__field" type="email" name="e-mail" placeholder="Введите e-mail" required>
+            </label>
+          </fieldset>
+          <fieldset class="feedback__section feedback__section--rating">
+            <legend class="feedback__section-name">Ваше общее впечатление:</legend>
+            <label class="feedback__field-name">Скорее положительное
+              <input class="feedback__field" type="radio" name="rating" value="positive" checked>
+            </label>
+            <label class="feedback__field-name">Скорее отрицательное
+              <input class="feedback__field" type="radio" name="rating" value="negative" checked>
+            </label>
+            <label class="feedback__field-name">Затрудняюсь ответить
+              <input class="feedback__field" type="radio" name="rating" value="underfind" checked>
             </label>
           </fieldset>
           <fieldset class="feedback__section feedback__section--visited">
             <legend class="feedback__section-name">Посещенные достопримечательности:</legend>
-            <label class="feedback__fild-name">Мост Дьявола
+            <label class="feedback__field-name">Мост Дьявола
               <input class="feedback__field" type="checkbox" name="devils-bridge" checked>
             </label>
-            <label class="feedback__fild-name">Гора-Колокол
+            <label class="feedback__field-name">Гора-Колокол
               <input class="feedback__field" type="checkbox" name="bell-rock" checked>
             </label>
-            <label class="feedback__fild-name">Слайд парк
+            <label class="feedback__field-name">Слайд парк
               <input class="feedback__field" type="checkbox" name="slide-rock-state-park" checked>
             </label>
-            <label class="feedback__fild-name">Красные скалы
+            <label class="feedback__field-name">Красные скалы
               <input class="feedback__field" type="checkbox" name="red-rocks">
             </label>
           </fieldset>
           <fieldset class="feedback__section feedback__section--desc">
-            <legend class="feedback__section-name">Опишите свои эмоции:</legend>
-            <textarea class="feedback__field" name="feedback-desc" placeholder="Опишите подробно все свои восторги"></textarea>
+            <label class="feedback__field-name">Опишите свои эмоции:
+              <textarea class="feedback__field" name="feedback-desc" placeholder="Опишите подробно все свои восторги"></textarea>
+            </label>
           </fieldset>
           <button class="button feedback__send-button" type="submit">Отправить отзыв</button>
           <p class="feedback__note">* - обязательные поля</p>
