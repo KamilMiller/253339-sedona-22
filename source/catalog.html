@@ -23,25 +23,29 @@
             <a href="form.html">Форма отзыва</a>
           </li>
           <li class="main-nav__item">
-            <a href="#">HTML Academy</a>
+            <a href="https://htmlacademy.ru/">HTML Academy</a>
           </li>
         </ul>
       </nav>
-      <div class="page-header__intro">
-        <h1 class="visually-hidden">Седона</h1>
-        <img class="page-header__title" src="http://via.placeholder.com/282x214/a2345f&text=SEDONA" alt="Sedona">
-      </div>
     </header>
 
     <main class="page-main">
-      <h2 class="page-main__subtitle ">Фото и видео</h2>
+      <div class="page-main__summary summary">
+        <div class="summary__header">
+          <h1 class="visually-hidden">Седона</h1>
+          <img class="summary__title" src="http://via.placeholder.com/282x214/a2345f&text=SEDONA" alt="Sedona">
+        </div>
+        <h2 class="summary__headline">Фото и видео</h2>
+        <p class="summary__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+      </div>
       <section class="photo">
         <h3 class="visually-hidden">Фото</h3>
-        <p class="photo__intro-text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
         <div class="photo__wrapper">
           <div class="photo__item photo-card">
             <figure class="photo-card__picture-box">
-              <img class="photo-card__picture" src="http://via.placeholder.com/280x280/a2345f&text=pic1" alt="Неродные просторы">
+              <a class="photo-card__picture-link" href="#">
+                <img class="photo-card__picture" src="http://via.placeholder.com/280x280/a2345f&text=pic1" alt="Неродные просторы">
+              </a>
               <figcaption class="photo-card__desc">Неродные просторы</figcaption>
             </figure>
             <p class="photo-card__creator">Автор фото: <span class="photo-card__creator-name">Борис</span></p>
@@ -52,7 +56,9 @@
           </div>
           <div class="photo__item photo-card">
             <figure class="photo-card__picture-box">
-              <img class="photo-card__picture" src="http://via.placeholder.com/280x280/a2345f&text=pic2" alt="Неродные просторы">
+              <a class="photo-card__picture-link" href="#">
+                <img class="photo-card__picture" src="http://via.placeholder.com/280x280/a2345f&text=pic2" alt="Неродные просторы">
+              </a>
               <figcaption class="photo-card__desc">Местная растительность</figcaption>
             </figure>
             <p class="photo-card__creator">Автор фото: <span class="photo-card__creator-name">Сергей</span></p>
@@ -63,7 +69,9 @@
           </div>
           <div class="photo__item photo-card">
             <figure class="photo-card__picture-box">
-              <img class="photo-card__picture" src="http://via.placeholder.com/280x280/a2345f&text=pic3" alt="Неродные просторы">
+              <a class="photo-card__picture-link" href="#">
+                <img class="photo-card__picture" src="http://via.placeholder.com/280x280/a2345f&text=pic3" alt="Неродные просторы">
+              </a>
               <figcaption class="photo-card__desc">Дорога на север</figcaption>
             </figure>
             <p class="photo-card__creator">Автор фото: <span class="photo-card__creator-name">Петр</span></p>
@@ -74,7 +82,9 @@
           </div>
           <div class="photo__item photo-card">
             <figure class="photo-card__picture-box">
-              <img class="photo-card__picture" src="http://via.placeholder.com/280x280/a2345f&text=pic4" alt="Неродные просторы">
+              <a class="photo-card__picture-link" href="#">
+                <img class="photo-card__picture" src="http://via.placeholder.com/280x280/a2345f&text=pic4" alt="Неродные просторы">
+              </a>
               <figcaption class="photo-card__desc">Мост Дьявола</figcaption>
             </figure>
             <p class="photo-card__creator">Автор фото: <span class="photo-card__creator-name">Антон</span></p>
@@ -126,7 +136,7 @@
       <div class="page-footer__copyright-wrapper">
         <p class="page-footer__copyright">
           Разработано
-          <a class="page-footer__copyright-link" href="#">
+          <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
             <img class="page-footer__copyright-logo" src="http://via.placeholder.com/27x34/a2345f" alt="HTML Academy Logo" aria-label="HTML Academy">
           </a>
         </p>
