@@ -1,0 +1,35 @@
+// Header.
+
+.page-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-header__logo-box {
+  order: 2;
+  height: 56px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+}
+
+.page-header__logo {
+  display: block;
+  .size(102px; 84px);
+  background-color: #dc6243;
+  // Заливка временно.
+
+  @media (min-width: @desktop-width) {
+    .size(187px; 97px);
+  }
+}
+
+.page-header__nav {
+  order: 1;
+}
