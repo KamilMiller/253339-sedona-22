@@ -1,0 +1,32 @@
+// Mixins.
+
+// Margins & Paddings.
+
+.side-padding(@left; @right) {
+  padding-left: @left;
+  padding-right: @right;
+}
+
+.side-margin(@left; @right) {
+  margin-left: @left;
+  margin-right: @right;
+}
+
+.indent-0(@value: 0) {
+  padding: @value;
+  margin: @value;
+}
+
+// Font size & Line height.
+
+.font(@size; @line) {
+  font-size: @size;
+  line-height: @line;
+}
+
+// Sizing.
+
+.size(@width, @height) {
+  width: @width;
+  height: @height;
+}

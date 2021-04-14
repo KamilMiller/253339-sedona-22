@@ -6,10 +6,10 @@
   padding: 20px;
 
   @media (min-width: @tablet-width) {
+    .side-padding(0; 0);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
-    .side-padding(0; 0);
   }
 }
 
@@ -18,9 +18,9 @@
 }
 
 .page-footer__hashtag {
+  .font(21px; 26px);
   margin-top: 15px;
   margin-bottom: 15px;
-  .font(21px; 26px);
   font-weight: bold;
 }
 
@@ -39,9 +39,9 @@
 .page-footer__hashtag-wrapper,
 .page-footer__copyright-wrapper {
   @media (min-width: @tablet-width) {
+    .side-padding(10px; 10px);
     display: flex;
     justify-content: center;
     align-items: center;
-    .side-padding(10px; 10px);
   }
 }

@@ -1,31 +1,35 @@
 // Page Summary.
 
+.summary {
+  position: relative;
+}
+
 .summary__header {
-  height: 158px;
+  min-height: 158px;
   background-color: @summary-photo;
 
   @media (min-width: @tablet-width) {
-    height: 290px;
+    min-height: 290px;
 
     @media (min-width: @desktop-width) {
-      height: 301px;
+      min-height: 301px;
     }
   }
 }
 
 .summary__header--main-page {
-  height: 389px;
+  min-height: 389px;
   background-color: @summary-photo;
 
   @media (min-width: @tablet-width) {
-    height: 518px;
+    min-height: 518px;
   }
 }
 
 .summary__headline,
 .summary__text {
-  width: 280px;
   .side-margin(auto; auto);
+  width: 280px;
   text-align: center;
 
   @media (min-width: @tablet-width) {
@@ -45,9 +49,16 @@
   margin-bottom: 33px;
 }
 
-.summary__arrow-box {
-  width: 100%;
-  height: 15px;
+.summary::before,
+.summary::after {
+  content: "";
+  position: absolute;
+  bottom: -33px;
+  display: block;
+}
+
+.summary::before {
+  .size(100%; 15px);
   background-color: @blue;
 
   @media (min-width: @tablet-width) {
@@ -55,10 +66,11 @@
   }
 }
 
-.summary__arrow {
-  width: 0;
-  height: 0;
+.summary::after {
+  .size(0; 0);
   .side-margin(auto; auto);
+  left: 0;
+  right: 0;
   border-left: 160px solid transparent;
   border-right: 160px solid transparent;
   border-top: 15px solid @white;
