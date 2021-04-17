@@ -1,0 +1,133 @@
+// Feedback form.
+
+.feedback {
+  &__section {
+    .side-margin(0; 0);
+    padding: 20px;
+    border: none;
+    border-top: 1px solid @light-grey;
+
+    &--personal {
+      .feedback__field-name {
+        align-items: center;
+        margin-top: 20px;
+        line-height: 26px;
+      }
+
+      .feedback__field {
+        flex-grow: 1;
+        width: 192px;
+        margin-left: 13px;
+      }
+    }
+
+    &--contact-info {
+      flex-direction: column;
+
+      .feedback__field-wrapper::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        display: block;
+        width: 58px;
+        height: 58px;
+        background-color: @contacts-field-icons;
+      }
+
+      .feedback__section-name {
+        margin-bottom: 3px;
+      }
+
+      .feedback__field-name {
+        margin: 15px 0 5px 22px;
+      }
+
+      .feedback__field {
+        width: 100%;
+      }
+    }
+
+    &--rating,
+    &--visited {
+      .feedback__field-name {
+        .font(18px; 26px);
+        align-items: center;
+        padding: 5px 0 5px 78px;
+        min-height: 56px;
+        box-sizing: border-box;
+        font-weight: bold;
+        text-transform: none;
+      }
+
+      .feedback__section-name {
+        margin-bottom: 21px;
+      }
+    }
+
+    &--desc {
+      .feedback__section-name {
+        margin-bottom: 15px;
+      }
+
+      .feedback__field {
+        width: 100%;
+        min-height: 160px;
+        padding: 13px 20px 13px 20px;
+        box-sizing: border-box;
+      }
+    }
+  }
+
+  &__section-name {
+    .font(18px; 26px);
+    margin: 0;
+    text-align: center;
+  }
+
+  &__field-name {
+    display: flex;
+  }
+
+  &__field {
+    .font(18px; 26px);
+    position: relative;
+    height: 58px;
+    padding: 18px 20px 14px 22px;
+    border: none;
+    box-sizing: border-box;
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-weight: bold;
+    color: @black;
+    background-color: @pale-grey;
+
+    &::placeholder {
+      .font(18px; 26px);
+      font-family: "PT Sans", "Arial", sans-serif;
+      font-weight: bold;
+      color: @black;
+    }
+  }
+
+  &__field-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__send-button-box {
+    padding: 31px 20px 48px 20px;
+  }
+
+  &__send-button {
+    .side-margin(auto; auto);
+    width: 100%;
+    max-width: 480px;
+    text-transform: uppercase;
+  }
+
+  &__note {
+    display: none;
+  }
+}
