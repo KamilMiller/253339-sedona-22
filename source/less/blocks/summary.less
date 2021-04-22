@@ -2,76 +2,103 @@
 
 .summary {
   position: relative;
-}
 
-.summary__header {
-  min-height: 158px;
-  background-color: @summary-photo;
+  &__header {
+    min-height: 158px;
+    background-color: @summary-photo;
 
-  @media (min-width: @tablet-width) {
-    min-height: 290px;
+    @media (min-width: @tablet-width) {
+      min-height: 290px;
 
-    @media (min-width: @desktop-width) {
-      min-height: 301px;
+      @media (min-width: @desktop-width) {
+        min-height: 301px;
+      }
     }
   }
-}
 
-.summary__header--main-page {
-  min-height: 389px;
-  background-color: @summary-photo;
-
-  @media (min-width: @tablet-width) {
-    min-height: 518px;
+  &__content-box {
+    .side-margin(auto; auto);
+    .side-padding(20px; 20px);
+    width: 320px;
+    box-sizing: border-box;
   }
-}
 
-.summary__headline,
-.summary__text {
-  .side-margin(auto; auto);
-  width: 280px;
-  text-align: center;
+  &__headline,
+  &__text {
+    .side-margin(auto; auto);
+    width: 280px;
+    text-align: center;
 
-  @media (min-width: @tablet-width) {
-    width: 520px;
+    @media (min-width: @tablet-width) {
+      width: 520px;
+    }
   }
-}
 
-.summary__headline {
-  .font(18px; 26px);
+  &__headline {
+    .font(18px; 26px);
 
-  @media (min-width: @desktop-width) {
-    font-size: 21px;
+    @media (min-width: @desktop-width) {
+      font-size: 21px;
+    }
   }
-}
 
-.summary__text {
-  margin-bottom: 33px;
-}
-
-.summary::before,
-.summary::after {
-  content: "";
-  position: absolute;
-  bottom: -33px;
-  display: block;
-}
-
-.summary::before {
-  .size(100%; 15px);
-  background-color: @blue;
-
-  @media (min-width: @tablet-width) {
-    display: none;
+  &__text {
+    margin-bottom: 33px;
   }
-}
 
-.summary::after {
-  .size(0; 0);
-  .side-margin(auto; auto);
-  left: 0;
-  right: 0;
-  border-left: 160px solid transparent;
-  border-right: 160px solid transparent;
-  border-top: 15px solid @white;
+  &--main-page {
+    .summary__header {
+      min-height: 389px;
+      background-color: @summary-photo;
+
+      @media (min-width: @tablet-width) {
+        min-height: 518px;
+      }
+    }
+
+    .summary__headline {
+      margin-top: 32px;
+    }
+
+    .summary__text {
+      margin-bottom: 48px;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -48px;
+      display: block;
+    }
+
+    &::before {
+      .size(100%; 15px);
+      background-color: @blue;
+
+      @media (min-width: @tablet-width) {
+        display: none;
+      }
+    }
+
+    &::after {
+      .size(0; 0);
+      .side-margin(auto; auto);
+      left: 0;
+      right: 0;
+      border-left: 160px solid transparent;
+      border-right: 160px solid transparent;
+      border-top: 15px solid @white;
+    }
+  }
+
+  &--form-page {
+    .summary__headline {
+      margin-top: 36px;
+    }
+
+    .summary__text {
+      margin-bottom: 16px;
+    }
+  }
 }
