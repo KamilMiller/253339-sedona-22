@@ -1,0 +1,42 @@
+// Photo Cards.
+
+.photo-card {
+  padding-top: 22px;
+  padding-bottom: 15px;
+  border-top: 1px solid @light-grey;
+
+  &__inner {
+    .mobile-fix-width();
+  }
+
+  &__picture-box {
+    margin: 0;
+  }
+
+  &__picture-link {
+    .size(280px; 280px);
+    display: block;
+  }
+
+  &__desc,
+  &__like-number {
+    font-weight: bold;
+    line-height: 24px;
+  }
+
+  &__creator {
+    margin: 0;
+    text-transform: none;
+  }
+
+  &__like-button {
+    width: 23px;
+    height: 21px;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    // Временное:
+    background-color: @super-grey;
+    outline: 1px dashed red;
+  }
+}

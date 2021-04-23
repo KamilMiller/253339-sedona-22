@@ -30,3 +30,12 @@
   width: @width;
   height: @height;
 }
+
+// Width Fixation.
+
+.mobile-fix-width(@value: 20px) {
+  .side-margin(auto; auto);
+  .side-padding(@value; @value);
+  width: 320px;
+  box-sizing: border-box;
+}
