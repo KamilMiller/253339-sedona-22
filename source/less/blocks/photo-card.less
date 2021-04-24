@@ -1,42 +1,36 @@
 // Photo Cards.
 
 .photo-card {
-  padding-top: 22px;
-  padding-bottom: 15px;
-  border-top: 1px solid @light-grey;
+  .mobile-fix-width();
+}
 
-  &__inner {
-    .mobile-fix-width();
-  }
+.photo-card__picture-box {
+  margin: 0;
+}
 
-  &__picture-box {
-    margin: 0;
-  }
+.photo-card__picture-link {
+  .size(280px; 280px);
+  display: block;
+}
 
-  &__picture-link {
-    .size(280px; 280px);
-    display: block;
-  }
+.photo-card__desc,
+.photo-card__like-number {
+  font-weight: bold;
+  line-height: 24px;
+}
 
-  &__desc,
-  &__like-number {
-    font-weight: bold;
-    line-height: 24px;
-  }
+.photo-card__creator {
+  margin: 0;
+  text-transform: none;
+}
 
-  &__creator {
-    margin: 0;
-    text-transform: none;
-  }
-
-  &__like-button {
-    width: 23px;
-    height: 21px;
-    padding: 0;
-    border: none;
-    cursor: pointer;
-    // Временное:
-    background-color: @super-grey;
-    outline: 1px dashed red;
-  }
+.photo-card__like-button {
+  width: 23px;
+  height: 21px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  // Временное:
+  background-color: @super-grey;
+  outline: 1px dashed red;
 }

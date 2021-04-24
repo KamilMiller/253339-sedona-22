@@ -1,55 +1,66 @@
 // Video Player.
 
 .player {
-  position: relative;
+  // position: relative;
+}
 
-  &__screen {
-    margin-bottom: 115px;
-    width: 100%;
-    height: 62vw;
-    background-color: #a2345f;
-    // Фон временно. Потом заменю картинкой.
-  }
+.player__screen {
+  // margin-bottom: 115px;
+  width: 100%;
+  height: 62vw;
+  background-color: #a2345f;
+  // Фон временно. Потом заменю картинкой.
+}
 
-  &__control-box {
-    position: absolute;
-    left: calc(50% - 140px);
-    bottom: -66px;
-    width: 280px;
-    display: flex;
-    flex-wrap: wrap;
-    height: 111px;
-    outline: 2px dashed red;
-  }
+.player__control-box {
+  // position: absolute;
+  // left: calc(50% - 140px);
+  // bottom: -66px;
+  width: 280px;
+  // height: 111px;
+  margin: -45px auto 0 auto;
+  // display: flex;
+  // flex-wrap: wrap;
+  // outline: 2px dashed red;
+}
 
-  &__scroll-box {
-    width: 100%;
-    height: 45px;
-    background-color: @black;
-    opacity: 0.6;
-  }
+.player__scroll-box {
+  .size(100%; 45px);
+  // width: 100%;
+  // height: 45px;
+  background-color: @black;
+  opacity: 0.6;
+}
 
-  button {
-    height: 20px;
-    padding: 0;
-    border: none;
-    cursor: pointer;
-    // Временное:
-    background-color: @super-grey;
-    outline: 1px dashed red;
-  }
+.player__buttons-box {
+  .size(100%; 66px);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: @pale-grey;
+  // width: 100%;
+}
 
-  &__replay {
-    .side-margin(25px; auto);
-    width: 16px;
-  }
+.player button {
+  height: 20px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  // Временное:
+  background-color: @super-grey;
+  outline: 1px dashed red;
+}
 
-  &__subtitles {
-    width: 32px;
-  }
+.player__replay {
+  .side-margin(25px; auto);
+  width: 16px;
+}
 
-  &__fullscreen {
-    .side-margin(31px; 23px);
-    width: 20px;
-  }
+.player__subtitles {
+  width: 32px;
+}
+
+.player__fullscreen {
+  .side-margin(31px; 23px);
+  width: 20px;
 }
