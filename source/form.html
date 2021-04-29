@@ -38,9 +38,9 @@
           <div class="summary__header">
             <h1 class="visually-hidden">Седона</h1>
           </div>
-          <div class="summary__content-box">
-            <h2 class="summary__headline">Оставьте свой отзыв</h2>
-            <p class="summary__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+          <div class="summary__content-box summary__content-box--form-page">
+            <h2 class="summary__headline summary__headline--form-page">Оставьте свой отзыв</h2>
+            <p class="summary__text summary__text--form-page">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
           </div>
         </div>
         <section class="feedback">
@@ -61,13 +61,17 @@
               </div>
             </fieldset>
             <fieldset class="feedback__section feedback__section--contact-info">
-              <div class="feedback__section-inner">
-                <h4 class="feedback__section-name feedback__section-name--contact-info">Контактная информация:</h4>
-                <div class="feedback__field-wrapper">
-                  <label class="feedback__label feedback__label--tel" for="phone-number">Контактный телефон*:</label>
+              <div class="feedback__section-inner feedback__section-inner--contact-info">
+                <div class="feedback__section-name-wrapper feedback__section-name-wrapper--contact-info">
+                  <h4 class="feedback__section-name feedback__section-name--contact-info">Контактная информация:</h4>
+                </div>
+                <div class="feedback__field-wrapper feedback__field-wrapper--tel">
+                  <label class="feedback__label feedback__label--tel" for="phone-number">
+                    <span>Контактный&nbsp;</span>телефон*:
+                  </label>
                   <input class="feedback__field feedback__field--tel" type="tel" id="phone-number" name="phone-number" placeholder="Введите телефон" required>
                 </div>
-                <div class="feedback__field-wrapper">
+                <div class="feedback__field-wrapper feedback__field-wrapper--email">
                   <label class="feedback__label feedback__label--email" for="e-mail">Электронная почта*:</label>
                   <input class="feedback__field feedback__field--email" type="email" id="e-mail" name="e-mail" placeholder="Введите e-mail" required>
                 </div>
@@ -78,28 +82,34 @@
                 <h4 class="feedback__section-name feedback__section-name--rating">Ваше общее впечатление:</h4>
                 <input class="visually-hidden" type="radio" id="rating-positive" name="rating" value="positive" checked>
                 <label class="feedback__label feedback__label--rating" for="rating-positive">Скорее положительное</label>
-                <input class="visually-hidden" type="radio" id="rating-negative" name="rating" value="negative" checked>
+                <input class="visually-hidden" type="radio" id="rating-negative" name="rating" value="negative">
                 <label class="feedback__label feedback__label--rating" for="rating-negative">Скорее отрицательное</label>
-                <input class="visually-hidden" type="radio" id="rating-underfind" name="rating" value="underfind" checked>
+                <input class="visually-hidden" type="radio" id="rating-underfind" name="rating" value="underfind">
                 <label class="feedback__label feedback__label--rating" for="rating-underfind">Затрудняюсь ответить</label>
               </div>
             </fieldset>
             <fieldset class="feedback__section feedback__section--visited">
-              <div class="feedback__section-inner">
-                <h4 class="feedback__section-name feedback__section-name--visited">Посещенные достопримечательности:</h4>
-                <input class="visually-hidden" type="checkbox" name="devils-bridge" checked>
-                <label class="feedback__label feedback__label--visited">Мост Дьявола</label>
-                <input class="visually-hidden" type="checkbox" name="bell-rock" checked>
-                <label class="feedback__label feedback__label--visited">Гора-Колокол</label>
-                <input class="visually-hidden" type="checkbox" name="slide-rock-state-park" checked>
-                <label class="feedback__label feedback__label--visited">Слайд парк</label>
-                <input class="visually-hidden" type="checkbox" name="red-rocks">
-                <label class="feedback__label feedback__label--visited">Красные скалы</label>
+              <div class="feedback__section-inner feedback__section-inner--visited">
+                <div class="feedback__section-name-wrapper feedback__section-name-wrapper--visited">
+                  <h4 class="feedback__section-name feedback__section-name--visited">Посещенные достопримечательности:</h4>
+                </div>
+                <div class="feedback__field-wrapper feedback__field-wrapper--visited">
+                  <input class="visually-hidden" type="checkbox" name="devils-bridge" id="devils-bridge" checked>
+                  <label class="feedback__label feedback__label--visited" for="devils-bridge">Мост Дьявола</label>
+                  <input class="visually-hidden" type="checkbox" name="bell-rock" id="bell-rock" checked>
+                  <label class="feedback__label feedback__label--visited" for="bell-rock">Гора-Колокол</label>
+                  <input class="visually-hidden" type="checkbox" name="slide-rock-state-park" id="slide-rock-state-park" checked>
+                  <label class="feedback__label feedback__label--visited" for="slide-rock-state-park">Слайд парк</label>
+                  <input class="visually-hidden" type="checkbox" name="red-rocks" id="red-rocks">
+                  <label class="feedback__label feedback__label--visited" for="red-rocks">Красные скалы</label>
+                </div>
               </div>
             </fieldset>
             <fieldset class="feedback__section feedback__section--desc">
               <div class="feedback__section-inner">
-                <h4 class="feedback__section-name feedback__section-name--desc">Опишите свои эмоции:</h4>
+                <div class="feedback__section-name-wrapper feedback__section-name-wrapper--desc">
+                  <h4 class="feedback__section-name feedback__section-name--desc">Опишите свои эмоции:</h4>
+                </div>
                 <textarea class="feedback__field feedback__field--desc" name="feedback-desc" placeholder="Опишите подробно все свои восторги"></textarea>
               </div>
             </fieldset>

@@ -4,38 +4,29 @@
   position: relative;
 
   &--main-page {
-    .summary__header {
-      min-height: 389px;
-      background-color: @summary-photo;
+    @media (min-width: @tablet-width) {
+      margin-bottom: 37px;
 
-      @media (min-width: @tablet-width) {
-        min-height: 518px;
+      @media (min-width: @desktop-width) {
+        margin-bottom: 41px;
       }
-    }
-
-    .summary__headline {
-      margin-top: 32px;
-    }
-
-    .summary__text {
-      margin-bottom: 48px;
     }
 
     &::before,
     &::after {
       content: "";
       position: absolute;
-      bottom: -48px;
+      bottom: -15px;
       display: block;
+
+      @media (min-width: @tablet-width) {
+        display: none;
+      }
     }
 
     &::before {
       .size(100%; 15px);
       background-color: @blue;
-
-      @media (min-width: @tablet-width) {
-        display: none;
-      }
     }
 
     &::after {
@@ -50,12 +41,14 @@
   }
 
   &--form-page {
-    .summary__headline {
-      margin-top: 36px;
-    }
+    margin-bottom: 1px;
 
-    .summary__text {
-      margin-bottom: 16px;
+    @media (min-width: @tablet-width) {
+      margin-bottom: 42px;
+
+      @media (min-width: @desktop-width) {
+        margin-bottom: 21px;
+      }
     }
   }
 }
@@ -71,25 +64,57 @@
       min-height: 301px;
     }
   }
+
+  &--main-page {
+    min-height: 389px;
+    background-color: @summary-photo;
+
+    @media (min-width: @tablet-width) {
+      min-height: 518px;
+    }
+  }
 }
 
 .summary__content-box {
   .mobile-fix-width();
-}
+  padding-top: 32px;
+  padding-bottom: 10px;
 
-.summary__headline,
-.summary__text {
-  .side-margin(auto; auto);
-  width: 280px;
-  text-align: center;
+  &--main-page {
+    @media (max-width: @mobile-width-only) {
+      padding-bottom: 27px;
+    }
 
-  @media (min-width: @tablet-width) {
-    width: 520px;
+    @media (min-width: @tablet-width) {
+      width: 540px;
+      padding-top: 43px;
+
+      @media (min-width: @desktop-width) {
+        padding-top: 55px;
+      }
+    }
+  }
+
+  &--form-page {
+    padding-top: 36px;
+
+    @media (min-width: @tablet-width) {
+      width: 475px;
+      padding-top: 72px;
+
+      @media (min-width: @desktop-width) {
+        padding-top: 113px;
+      }
+    }
   }
 }
 
 .summary__headline {
+  .side-margin(auto; auto);
   .font(18px; 26px);
+  margin-top: 0;
+  margin-bottom: 27px;
+  text-align: center;
 
   @media (min-width: @tablet-width) {
     font-size: 21px;
@@ -97,5 +122,6 @@
 }
 
 .summary__text {
-  margin-bottom: 33px;
+  margin: 0 auto 5px auto;
+  text-align: center;
 }
