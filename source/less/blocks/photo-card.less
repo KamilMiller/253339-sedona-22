@@ -2,6 +2,20 @@
 
 .photo-card {
   .mobile-fix-width();
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    .indent-0();
+    width: 100%;
+  }
+
+  &--first {
+    .photo-card__picture-link {
+      @media (min-width: @tablet-width) {
+        height: 400px;
+      }
+    }
+  }
 }
 
 .photo-card__picture-box {
@@ -11,10 +25,49 @@
 .photo-card__picture-link {
   .size(280px; 280px);
   display: block;
+  background-color: @background-for-images;
+
+  @media (min-width: @tablet-width) {
+    .size(100%; 267px);
+    outline: 1px dashed blue;
+  }
 }
 
-.photo-card__desc,
-.photo-card__like-number {
+.photo-card__desc {
+  @media (min-width: @tablet-width) {
+    display: block;
+    min-height: 80px;
+    padding: 22px 100px 15px 20px;
+    background-color: @pale-grey;
+    box-sizing: border-box;
+
+    @media (min-width: @desktop-width) {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      color: @white;
+      background-color: rgba(@black, 0.3);
+    }
+  }
+
+  // &--dark {
+  //   @media (min-width: @tablet-width) {
+  //     background-color: @photo-desc-dark;
+  //   }
+  // }
+}
+
+.photo-card__desc-text,
+.photo-card__creator {
+  margin: 0;
+
+  @media (min-width: @desktop-width) {
+    color: @white;
+    opacity: 1;
+  }
+}
+
+.photo-card__desc-text {
   font-weight: bold;
   line-height: 24px;
 }
@@ -24,13 +77,35 @@
   text-transform: none;
 }
 
+.photo-card__like-box {
+  display: flex;
+  align-items: center;
+  min-width: 65px;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    bottom: 30px;
+    right: 19px;
+  }
+}
+
 .photo-card__like-button {
   width: 23px;
   height: 21px;
   padding: 0;
+  margin-right: 9px;
   border: none;
   cursor: pointer;
   // Временное:
   background-color: @super-grey;
   outline: 1px dashed red;
+}
+
+.photo-card__like-number {
+  font-weight: bold;
+  line-height: 24px;
+
+  @media (min-width: @desktop-width) {
+    color: @white;
+  }
 }

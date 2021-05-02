@@ -1,35 +1,47 @@
 // Video Player.
 
-.player {
-  // position: relative;
-}
-
 .player__screen {
-  // margin-bottom: 115px;
   width: 100%;
+  max-width: 800px;
   height: 62vw;
   background-color: #a2345f;
   // Фон временно. Потом заменю картинкой.
+
+  @media (min-width: @tablet-width) {
+    .side-margin(auto; auto);
+    height: 500px;
+  }
 }
 
 .player__control-box {
-  // position: absolute;
-  // left: calc(50% - 140px);
-  // bottom: -66px;
+  position: relative;
   width: 280px;
-  // height: 111px;
   margin: -45px auto 0 auto;
-  // display: flex;
-  // flex-wrap: wrap;
-  // outline: 2px dashed red;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    max-width: 800px;
+    height: 93px;
+    margin-top: -93px;
+  }
 }
 
 .player__scroll-box {
   .size(100%; 45px);
-  // width: 100%;
-  // height: 45px;
-  background-color: @black;
-  opacity: 0.6;
+  background-color: rgba(@black, 0.6);
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    left: 93px;
+    width: 389px;
+    height: 100%;
+    background-color: transparent;
+    outline: 2px dashed blue;
+
+    @media (min-width: @desktop-width) {
+      width: 540px;
+    }
+  }
 }
 
 .player__buttons-box {
@@ -38,7 +50,11 @@
   flex-wrap: wrap;
   align-items: center;
   background-color: @pale-grey;
-  // width: 100%;
+
+  @media (min-width: @tablet-width) {
+    height: 100%;
+    background-color: rgba(@black, 0.6);
+  }
 }
 
 .player button {

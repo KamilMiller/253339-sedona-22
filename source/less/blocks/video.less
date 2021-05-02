@@ -4,10 +4,24 @@
   border-top: 1px solid @light-grey;
   margin-bottom: 50px;
   padding-top: 32px;
+
+  @media (min-width: @tablet-width) {
+    // padding-top: 52px;
+    padding: 52px 60px 0 60px;
+
+    @media (min-width: @desktop-width) {
+      padding-top: 55px;
+    }
+  }
 }
 
 .video__intro-wrapper {
   .mobile-fix-width(25px);
+
+  @media (min-width: @tablet-width) {
+    .side-padding(0; 0);
+    width: 450px;
+  }
 }
 
 .video__intro-text {
@@ -15,8 +29,21 @@
   text-align: center;
   margin: 0 0 33px 0;
 
+  @media (min-width: @tablet-width) {
+    margin-bottom: 26px;
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 78px;
+    }
+  }
+
   &--marked {
     .font(18px; 26px);
+    margin-bottom: 27px;
     font-weight: bold;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 25px;
+    }
   }
 }
