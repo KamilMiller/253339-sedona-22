@@ -1,5 +1,9 @@
 // Video Player.
 
+.player {
+  position: relative;
+}
+
 .player__screen {
   width: 100%;
   max-width: 800px;
@@ -14,46 +18,51 @@
 }
 
 .player__control-box {
+  .side-margin(auto; auto);
   position: relative;
+  display: flex;
+  justify-content: flex-start;
   width: 280px;
-  margin: -45px auto 0 auto;
+  min-height: 66px;
+  padding: 23px;
+  box-sizing: border-box;
+  outline: 1px dashed green;
 
   @media (min-width: @tablet-width) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
     width: 100%;
     max-width: 800px;
-    height: 93px;
-    margin-top: -93px;
+    min-height: 93px;
+    padding: 10px 41px 10px 35px;
+    background-color: rgba(@black, 0.6);
   }
 }
 
 .player__scroll-box {
   .size(100%; 45px);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100%;
   background-color: rgba(@black, 0.6);
 
   @media (min-width: @tablet-width) {
-    position: absolute;
-    left: 93px;
+    position: static;
+    order: 2;
+    display: block;
     width: 389px;
-    height: 100%;
+    height: 50px;
+    margin-right: auto;
     background-color: transparent;
     outline: 2px dashed blue;
 
     @media (min-width: @desktop-width) {
       width: 540px;
     }
-  }
-}
-
-.player__buttons-box {
-  .size(100%; 66px);
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  background-color: @pale-grey;
-
-  @media (min-width: @tablet-width) {
-    height: 100%;
-    background-color: rgba(@black, 0.6);
   }
 }
 
@@ -68,15 +77,27 @@
 }
 
 .player__replay {
-  .side-margin(25px; auto);
   width: 16px;
+  margin-right: auto;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 42px;
+  }
 }
 
 .player__subtitles {
   width: 32px;
+
+  @media (min-width: @tablet-width) {
+    order: 3;
+  }
 }
 
 .player__fullscreen {
-  .side-margin(31px; 23px);
   width: 20px;
+  margin-left: 31px;
+
+  @media (min-width: @tablet-width) {
+    order: 4;
+  }
 }
