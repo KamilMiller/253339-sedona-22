@@ -13,4 +13,17 @@
   color: @white;
   text-decoration: none;
   text-align: center;
+
+  &:hover {
+    background-color: @blue;
+  }
+
+  &:active {
+    background-color: @dark-blue;
+    color: rgba(@white, 0.3);
+  }
+
+  &--disabled {
+    background-color: @light-grey;
+  }
 }
