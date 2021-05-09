@@ -1,0 +1,143 @@
+// Modal (failure).
+
+.modal {
+  position: fixed;
+  top: 15vh;
+  left: calc(50% - 160px);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 320px;
+  box-sizing: border-box;
+  background-color: @white;
+  box-shadow: 0 0 20px 5px rgba(@black, 0.3);
+
+  @media (min-width: @tablet-width) {
+    min-height: 347px;
+  }
+
+
+  &--failure {
+    min-height: 280px;
+    padding: 20px;
+
+    @media (min-width: @tablet-width) {
+      left: calc(50% - 200px);
+      width: 400px;
+
+      @media (min-width: @desktop-width) {
+        top: 25vh;
+      }
+    }
+  }
+
+  &--success {
+    min-height: 323px;
+    padding-top: 20px;
+
+    @media (min-width: @tablet-width) {
+      left: calc(50% - 320px);
+      width: 640px;
+      min-height: 347px;
+    }
+  }
+
+  &--closed {
+    display: none;
+  }
+}
+
+.modal__headline,
+.modal__message {
+  text-align: center;
+}
+
+.modal__headline {
+  .font(18px; 26px);
+  margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    .font(30px; 40px);
+  }
+
+  &--failure {
+    margin-top: 20px;
+
+    @media (min-width: @tablet-width) {
+      width: 250px;
+      margin-top: 29px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &--success {
+    margin-top: 18px;
+
+    @media (min-width: @tablet-width) {
+      width: 450px;
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.modal__message {
+  .font(14px; 24px);
+  width: 230px;
+  margin-top: 0;
+
+  &--failure {
+    margin-bottom: 22px;
+
+    @media (min-width: @tablet-width) {
+      width: 280px;
+      margin-bottom: 38px;
+    }
+  }
+
+  &--success {
+    margin-bottom: auto;
+
+    @media (min-width: @tablet-width) {
+      width: 450px;
+    }
+  }
+}
+
+.modal__button-box {
+  width: 100%;
+  padding: 20px;
+  background-color: @pale-grey;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    padding: 45px;
+  }
+}
+
+.modal__button {
+  .font(18px; 26px);
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
+
+  &--failure {
+    width: 180px;
+
+    @media (min-width: @tablet-width) {
+      width: 272px;
+      margin-bottom: 28px;
+    }
+  }
+
+  &--success {
+    width: 100%;
+
+    @media (min-width: @tablet-width) {
+      .side-margin(auto; auto);
+      width: 458px;
+    }
+  }
+}
