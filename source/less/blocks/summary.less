@@ -56,7 +56,11 @@
     margin-bottom: 17px;
 
     @media (min-width: @tablet-width) {
-      margin-bottom: 62px;
+      margin-bottom: 61px;
+
+      @media (min-width: @desktop-width) {
+        margin-bottom: 65px;
+      }
     }
   }
 }
@@ -117,11 +121,11 @@
 
   &--catalog-page {
     @media (min-width: @tablet-width) {
-      padding-top: 57px;
+      padding-top: 65px;
       width: 480px;
 
       @media (min-width: @desktop-width) {
-        padding-top: 95px;
+        padding-top: 100px;
       }
     }
   }
@@ -149,6 +153,12 @@
   &--form-page {
     margin-bottom: 29px;
 
+    @media (min-width: @tablet-width) {
+      margin-bottom: 33px;
+    }
+  }
+
+  &--catalog-page {
     @media (min-width: @tablet-width) {
       margin-bottom: 33px;
     }

@@ -7,7 +7,7 @@
 .player__screen {
   width: 100%;
   max-width: 800px;
-  height: 62vw;
+  height: 63vw;
   background-color: #a2345f;
   // Фон временно. Потом заменю картинкой.
 
@@ -48,6 +48,8 @@
   left: 0;
   right: 0;
   bottom: 100%;
+  padding-top: 21px;
+  box-sizing: border-box;
   background-color: rgba(@black, 0.6);
 
   @media (min-width: @tablet-width) {
@@ -57,12 +59,38 @@
     width: 389px;
     height: 50px;
     margin-right: auto;
+    padding-top: 23px;
     background-color: transparent;
     outline: 2px dashed blue;
 
     @media (min-width: @desktop-width) {
       width: 540px;
     }
+  }
+}
+
+.player__scroll {
+  .size(235px; 3px);
+  .side-margin(auto; auto);
+  position: relative;
+  background-color: rgba(@white, 0.2);
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
+}
+
+.player__pointer {
+  .size(9px; 9px);
+  position: absolute;
+  top: -3px;
+  left: 34px;
+  border-radius: 50%;
+  background-color: @white;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    left: 113px;
   }
 }
 

@@ -25,11 +25,12 @@
 .photo-card__picture-link {
   .size(280px; 280px);
   display: block;
+  margin-bottom: 10px;
   background-color: @background-for-images;
 
   @media (min-width: @tablet-width) {
     .size(100%; 267px);
-    outline: 1px dashed blue;
+    margin-bottom: 0;
   }
 }
 
@@ -40,7 +41,7 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
     min-height: 80px;
-    padding: 22px 20px 15px 20px;
+    padding: 16px 20px 15px 20px;
     background-color: @pale-grey;
     box-sizing: border-box;
 
@@ -55,8 +56,11 @@
 }
 
 .photo-card__desc-wrapper {
+  margin-bottom: 10px;
+
   @media (min-width: @tablet-width) {
     margin-right: auto;
+    margin-bottom: 0;
   }
 }
 
@@ -73,6 +77,7 @@
 .photo-card__text {
   font-weight: bold;
   line-height: 24px;
+  margin-bottom: 3px;
 }
 
 .photo-card__creator {
@@ -90,12 +95,16 @@
   width: 23px;
   height: 21px;
   padding: 0;
-  margin-right: 9px;
+  margin-right: 14px;
   border: none;
   cursor: pointer;
   // Временное:
   background-color: @super-grey;
   outline: 1px dashed red;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 10px;
+  }
 }
 
 .photo-card__like-number {
