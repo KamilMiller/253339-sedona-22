@@ -2,8 +2,9 @@
 
 .modal {
   position: fixed;
-  top: 15vh;
-  left: calc(50% - 160px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 3;
   display: flex;
   flex-direction: column;
@@ -23,12 +24,7 @@
     padding: 20px;
 
     @media (min-width: @tablet-width) {
-      left: calc(50% - 200px);
       width: 400px;
-
-      @media (min-width: @desktop-width) {
-        top: 25vh;
-      }
     }
   }
 
@@ -37,7 +33,6 @@
     padding-top: 20px;
 
     @media (min-width: @tablet-width) {
-      left: calc(50% - 320px);
       width: 640px;
       min-height: 347px;
     }
