@@ -49,7 +49,7 @@
   &--illustrated {
     .indent-0();
     color: @white;
-    background-color: @blue;
+    background-color: @light-blue;
 
     @media (min-width: @tablet-width) {
       width: 100%;
@@ -167,11 +167,60 @@
 
 .advantages__illustration-box {
   .size(100%; 260px);
-  background-color: #a2345f;
+  background-color: @light-brown;
+  background-repeat: no-repeat;
+  background-size: 520px;
+  background-position: center;
 
   @media (min-width: @tablet-width) {
     .size(66.6666%; auto);
+    background-color: transparent;
+    background-size: 512px;
     align-self: stretch;
+
+    @media (min-width: @desktop-width) {
+      background-size: 800px;
+    }
+  }
+}
+
+.advantages__illustration-box--city {
+  background-image: url("../../img/jpg/photo-city-mobile.jpg");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/jpg/photo-city-mobile@2x.jpg");
+  }
+
+  @media (min-width: @tablet-width) {
+    background-position: right;
+
+    @media (min-width: @desktop-width) {
+      background-image: url("../../img/jpg/photo-city.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/jpg/photo-city@2x.jpg");
+      }
+    }
+  }
+}
+
+.advantages__illustration-box--bridge {
+  background-image: url("../../img/jpg/photo-bridge-mobile.jpg");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/jpg/photo-bridge-mobile@2x.jpg");
+  }
+
+  @media (min-width: @tablet-width) {
+    background-position: left;
+
+    @media (min-width: @desktop-width) {
+      background-image: url("../../img/jpg/photo-bridge.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/jpg/photo-bridge@2x.jpg");
+      }
+    }
   }
 }
 
