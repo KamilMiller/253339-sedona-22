@@ -6,10 +6,10 @@
   &--main-page {
     @media (min-width: @tablet-width) {
       margin-bottom: 37px;
+    }
 
-      @media (min-width: @desktop-width) {
-        margin-bottom: 25px;
-      }
+    @media (min-width: @desktop-width) {
+      margin-bottom: 25px;
     }
 
     &::before,
@@ -45,10 +45,10 @@
 
     @media (min-width: @tablet-width) {
       margin-bottom: 50px;
+    }
 
-      @media (min-width: @desktop-width) {
-        margin-bottom: 21px;
-      }
+    @media (min-width: @desktop-width) {
+      margin-bottom: 21px;
     }
   }
 
@@ -57,15 +57,16 @@
 
     @media (min-width: @tablet-width) {
       margin-bottom: 61px;
+    }
 
-      @media (min-width: @desktop-width) {
-        margin-bottom: 65px;
-      }
+    @media (min-width: @desktop-width) {
+      margin-bottom: 65px;
     }
   }
 }
 
 .summary__header {
+  position: relative;
   min-height: 158px;
   background-color: @background-for-images;
   background-image: url("../../img/jpg/sunnary-back-mobile.jpg");
@@ -85,9 +86,27 @@
     @media (min-resolution: 2dppx) {
       background-image: url("../../img/jpg/sunnary-back@2x.jpg");
     }
+  }
 
-    @media (min-width: @desktop-width) {
-      min-height: 301px;
+  @media (min-width: @desktop-width) {
+    min-height: 301px;
+  }
+
+  &::after {
+    .size(100%; 57px);
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    background-color: transparent;
+    background-position: center bottom;
+    background-image: url("../../img/svg/intro-triangle-mobile.svg");
+    background-size: 903px 57px;
+
+    @media (min-width: @tablet-width) {
+      background-image: url("../../img/svg/intro-triangle.svg");
+      background-size: 1200px 57px;
     }
   }
 
@@ -113,10 +132,10 @@
     @media (min-width: @tablet-width) {
       width: 540px;
       padding-top: 43px;
+    }
 
-      @media (min-width: @desktop-width) {
-        padding-top: 55px;
-      }
+    @media (min-width: @desktop-width) {
+      padding-top: 55px;
     }
   }
 
@@ -126,10 +145,10 @@
     @media (min-width: @tablet-width) {
       width: 475px;
       padding-top: 64px;
+    }
 
-      @media (min-width: @desktop-width) {
-        padding-top: 113px;
-      }
+    @media (min-width: @desktop-width) {
+      padding-top: 113px;
     }
   }
 
@@ -137,10 +156,10 @@
     @media (min-width: @tablet-width) {
       padding-top: 65px;
       width: 480px;
+    }
 
-      @media (min-width: @desktop-width) {
-        padding-top: 100px;
-      }
+    @media (min-width: @desktop-width) {
+      padding-top: 100px;
     }
   }
 }

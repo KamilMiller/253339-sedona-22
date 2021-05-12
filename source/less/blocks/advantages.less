@@ -119,10 +119,10 @@
         .side-margin(0; 0);
         margin-top: 24px;
         width: 180px;
+      }
 
-        @media (min-width: @desktop-width) {
-          width: 300px;
-        }
+      @media (min-width: @desktop-width) {
+        width: 300px;
       }
     }
   }
@@ -143,10 +143,10 @@
   @media (min-width: @tablet-width) {
     font-size: 21px;
     text-align: center;
+  }
 
-    @media (min-width: @desktop-width) {
-      width: 200px;
-    }
+  @media (min-width: @desktop-width) {
+    width: 200px;
   }
 }
 
@@ -158,69 +158,39 @@
   @media (min-width: @tablet-width) {
     .side-margin(auto; auto);
     width: 192px;
+  }
 
-    @media (min-width: @desktop-width) {
-      width: 280px;
-    }
+  @media (min-width: @desktop-width) {
+    width: 280px;
   }
 }
 
 .advantages__illustration-box {
   .size(100%; 260px);
+  text-align: center;
   background-color: @light-brown;
   background-repeat: no-repeat;
   background-size: 520px;
   background-position: center;
 
   @media (min-width: @tablet-width) {
-    .size(66.6666%; auto);
+    .size(66.6666%; 256px);
     background-color: transparent;
     background-size: 512px;
     align-self: stretch;
+  }
 
-    @media (min-width: @desktop-width) {
-      background-size: 800px;
-    }
+  @media (min-width: @desktop-width) {
+    background-size: 800px;
   }
 }
 
-.advantages__illustration-box--city {
-  background-image: url("../../img/jpg/photo-city-mobile.jpg");
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("../../img/jpg/photo-city-mobile@2x.jpg");
-  }
+.advantages__illustration {
+  .size(100%; 260px);
+  object-fit: cover;
 
   @media (min-width: @tablet-width) {
-    background-position: right;
-
-    @media (min-width: @desktop-width) {
-      background-image: url("../../img/jpg/photo-city.jpg");
-
-      @media (min-resolution: 2dppx) {
-        background-image: url("../../img/jpg/photo-city@2x.jpg");
-      }
-    }
-  }
-}
-
-.advantages__illustration-box--bridge {
-  background-image: url("../../img/jpg/photo-bridge-mobile.jpg");
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("../../img/jpg/photo-bridge-mobile@2x.jpg");
-  }
-
-  @media (min-width: @tablet-width) {
-    background-position: left;
-
-    @media (min-width: @desktop-width) {
-      background-image: url("../../img/jpg/photo-bridge.jpg");
-
-      @media (min-resolution: 2dppx) {
-        background-image: url("../../img/jpg/photo-bridge@2x.jpg");
-      }
-    }
+    height: 256px;
   }
 }
 
@@ -245,10 +215,10 @@
   .advantages__desc {
     @media (min-width: @tablet-width) {
       margin-top: 7px;
+    }
 
-      @media (min-width: @desktop-width) {
-        width: 290px;
-      }
+    @media (min-width: @desktop-width) {
+      width: 290px;
     }
   }
 
