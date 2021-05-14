@@ -15,6 +15,13 @@
         height: 400px;
       }
     }
+
+    .photo-card__picture {
+      @media (min-width: @tablet-width) {
+        .size(1200px; 400px);
+        object-fit: cover;
+      }
+    }
   }
 }
 
@@ -31,6 +38,13 @@
   @media (min-width: @tablet-width) {
     .size(100%; 267px);
     margin-bottom: 0;
+  }
+}
+
+.photo-card__picture {
+  @media (min-width: @tablet-width) {
+    .size(100%; 267px);
+    object-fit: cover;
   }
 }
 

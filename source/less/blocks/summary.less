@@ -69,27 +69,32 @@
   position: relative;
   min-height: 158px;
   background-color: @background-for-images;
-  background-image: url("../../img/jpg/sunnary-back-mobile.jpg");
+  background-image: url("../../img/jpg/summary-back-mobile.jpg");
   background-repeat: no-repeat;
   background-size: 903px;
   background-position: center bottom;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../../img/jpg/sunnary-back-mobile@2x.jpg");
+    background-image: url("../../img/jpg/summary-back-mobile@2x.jpg");
   }
 
   @media (min-width: @tablet-width) {
     min-height: 290px;
-    background-image: url("../../img/jpg/sunnary-back.jpg");
+    background-image: url("../../img/jpg/summary-back.jpg");
     background-size: 1200px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../img/jpg/sunnary-back@2x.jpg");
+      background-image: url("../../img/jpg/summary-back@2x.jpg");
     }
   }
 
   @media (min-width: @desktop-width) {
     min-height: 301px;
+
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/jpg/summary-back@2x.jpg");
+    }
   }
 
   &::after {
