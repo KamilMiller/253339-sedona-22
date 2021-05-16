@@ -68,6 +68,7 @@
 .summary__header {
   position: relative;
   min-height: 158px;
+  text-align: center;
   background-color: @background-for-images;
   background-image: url("../../img/jpg/summary-back-mobile.jpg");
   background-repeat: no-repeat;
@@ -120,6 +121,17 @@
 
     @media (min-width: @tablet-width) {
       min-height: 518px;
+    }
+  }
+}
+
+.summary__intro {
+  &--main {
+    margin-top: 90px;
+
+    @media (min-width: @tablet-width) {
+      .size(461px; 350px);
+      margin-top: 77px;
     }
   }
 }
