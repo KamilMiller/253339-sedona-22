@@ -19,7 +19,9 @@
 
 .socials__link {
   .size(46px; 48px);
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: @light-blue;
 
   &:hover {
@@ -28,5 +30,9 @@
 
   &:active {
     background-color: @dark-blue;
+
+    .socials__logo {
+      opacity: 0.3;
+    }
   }
 }

@@ -222,8 +222,9 @@
     }
   }
 
-  li {
+  .advantages__inside-list-item {
     .mobile-fix-width;
+    position: relative;
     padding-left: 70px;
     margin-bottom: 26px;
 
@@ -247,6 +248,62 @@
     &:nth-child(3) {
       @media (min-width: @tablet-width) {
         order: 2;
+      }
+    }
+
+    &--house,
+    &--gift,
+    &--burger {
+      &::before {
+        .size(40px; 38px);
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 20px;
+        display: block;
+        background-color: transparent;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+
+        @media (min-width: @tablet-width) {
+          .size(76px; 75px);
+          top: 57px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+
+    &--house {
+      &::before {
+        background-image: url("../../img/svg/icon-house.svg");
+        background-size: 39px 37px;
+
+        @media (min-width: @tablet-width) {
+          background-size: 75px 72px;
+        }
+      }
+    }
+
+    &--gift {
+      &::before {
+        background-image: url("../../img/svg/icon-gift.svg");
+        background-size: 32px 38px;
+
+        @media (min-width: @tablet-width) {
+          background-size: 64px 75px;
+        }
+      }
+    }
+
+    &--burger {
+      &::before {
+        background-image: url("../../img/svg/icon-burger.svg");
+        background-size: 40px 35px;
+
+        @media (min-width: @tablet-width) {
+          background-size: 76px 68px;
+        }
       }
     }
   }

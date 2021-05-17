@@ -57,6 +57,19 @@
 }
 
 .page-footer__copyright-link {
-  .size(27px; 34px);
+  .size(27px; 35px);
   display: block;
+
+  &:hover {
+    .page-footer__copyright-logo {
+      fill: @light-blue;
+    }
+  }
+
+  &:active {
+    .page-footer__copyright-logo {
+      fill: @black;
+      opacity: 0.3;
+    }
+  }
 }
