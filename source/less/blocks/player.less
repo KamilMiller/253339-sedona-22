@@ -9,7 +9,6 @@
   max-width: 800px;
   height: 63vw;
   background-color: #a2345f;
-  // Фон временно. Потом заменю картинкой.
 
   @media (min-width: @tablet-width) {
     .side-margin(auto; auto);
@@ -31,7 +30,7 @@
   min-height: 66px;
   padding: 23px;
   box-sizing: border-box;
-  outline: 1px dashed green;
+  background-color: @pale-grey;
 
   @media (min-width: @tablet-width) {
     position: absolute;
@@ -104,9 +103,37 @@
   padding: 0;
   border: none;
   cursor: pointer;
-  // Временное:
-  background-color: @super-grey;
-  outline: 1px dashed red;
+  background-color: transparent;
+
+  &:hover {
+    .player__control-icon {
+      fill: @ashen;
+
+      @media (min-width: @tablet-width) {
+        fill: @white;
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &:active {
+    .player__control-icon {
+      fill: @ashen;
+      opacity: 0.3;
+
+      @media (min-width: @tablet-width) {
+        fill: @white;
+      }
+    }
+  }
+}
+
+.player__control-icon {
+  fill: @control;
+
+  @media (min-width: @tablet-width) {
+    fill: @white;
+  }
 }
 
 .player__replay {
