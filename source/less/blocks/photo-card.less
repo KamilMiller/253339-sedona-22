@@ -101,7 +101,7 @@
 
 .photo-card__like-box {
   display: flex;
-  align-items: center;
+  // align-items: center;
   min-width: 65px;
 }
 
@@ -111,13 +111,22 @@
   padding: 0;
   margin-right: 14px;
   border: none;
+  background-color: transparent;
   cursor: pointer;
-  // Временное:
-  background-color: @super-grey;
-  outline: 1px dashed red;
+  opacity: 0.3;
 
   @media (min-width: @tablet-width) {
     margin-right: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    opacity: 1;
+  }
+}
+
+.photo-card__like-logo {
+  @media (min-width: @desktop-width) {
+    fill: @white;
   }
 }
 

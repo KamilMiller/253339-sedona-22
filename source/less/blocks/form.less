@@ -243,6 +243,8 @@
       width: 58px;
       height: 58px;
       background-color: @contacts-field-icons;
+      background-repeat: no-repeat;
+      background-position: center center;
     }
 
     @media (min-width: @desktop-width) {
@@ -254,9 +256,19 @@
 
   &--tel {
     &::before {
+      background-image: url("../../img/svg/phone.svg");
+      background-size: 18px 18px;
+
       @media (min-width: @desktop-width) {
         right: 79px;
       }
+    }
+  }
+
+  &--email {
+    &::before {
+      background-image: url("../../img/svg/mail.svg");
+      background-size: 16px 12px;
     }
   }
 
@@ -329,6 +341,7 @@
     box-sizing: border-box;
     font-weight: bold;
     text-transform: none;
+    cursor: pointer;
 
     &:hover::before {
       background-color: @light-grey;
@@ -415,7 +428,8 @@
       left: 17px;
       display: none;
       background-color: transparent;
-      outline: 1px dashed red;
+      background-image: url("../../img/svg/tick.svg");
+      background-repeat: no-repeat;
     }
   }
 }
