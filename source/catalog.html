@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="page__body">
     <div class="page__inner">
@@ -59,6 +59,8 @@
                 <figure class="photo-card__picture-box">
                   <a class="photo-card__picture-link" href="#">
                     <picture>
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/photo-1.webp 1x, img/webp/photo-1@2x.webp 2x">
+                      <source type="image/webp" srcset="img/webp/photo-1-mobile.webp 1x, img/webp/photo-1-mobile@2x.webp 2x">
                       <source media="(min-width: 768px)" srcset="img/jpg/photo-1.jpg 1x, img/jpg/photo-1@2x.jpg 2x">
                       <img class="photo-card__picture" src="img/jpg/photo-1-mobile.jpg" srcset="img/jpg/photo-1-mobile@2x.jpg 2x" width="280" height="280" alt="Неродные просторы">
                     </picture>
@@ -85,6 +87,8 @@
                 <figure class="photo-card__picture-box">
                   <a class="photo-card__picture-link" href="#">
                     <picture>
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/photo-2.webp 1x, img/webp/photo-2@2x.webp 2x">
+                      <source type="image/webp" srcset="img/webp/photo-2-mobile.webp 1x, img/webp/photo-2-mobile@2x.webp 2x">
                       <source media="(min-width: 768px)" srcset="img/jpg/photo-2.jpg 1x, img/jpg/photo-2@2x.jpg 2x">
                       <img class="photo-card__picture" src="img/jpg/photo-2-mobile.jpg" srcset="img/jpg/photo-2-mobile@2x.jpg 2x" width="280" height="280" alt="Неродные просторы">
                     </picture>
@@ -111,6 +115,8 @@
                 <figure class="photo-card__picture-box">
                   <a class="photo-card__picture-link" href="#">
                     <picture>
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/photo-3.webp 1x, img/webp/photo-3@2x.webp 2x">
+                      <source type="image/webp" srcset="img/webp/photo-3-mobile.webp 1x, img/webp/photo-3-mobile@2x.webp 2x">
                       <source media="(min-width: 768px)" srcset="img/jpg/photo-3.jpg 1x, img/jpg/photo-3@2x.jpg 2x">
                       <img class="photo-card__picture" src="img/jpg/photo-3-mobile.jpg" srcset="img/jpg/photo-3-mobile@2x.jpg 2x" width="280" height="280" alt="Неродные просторы">
                     </picture>
@@ -137,6 +143,8 @@
                 <figure class="photo-card__picture-box">
                   <a class="photo-card__picture-link" href="#">
                     <picture>
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/photo-4.webp 1x, img/webp/photo-4@2x.webp 2x">
+                      <source type="image/webp" srcset="img/webp/photo-4-mobile.webp 1x, img/webp/photo-4-mobile@2x.webp 2x">
                       <source media="(min-width: 768px)" srcset="img/jpg/photo-4.jpg 1x, img/jpg/photo-4@2x.jpg 2x">
                       <img class="photo-card__picture" src="img/jpg/photo-4-mobile.jpg" srcset="img/jpg/photo-4-mobile@2x.jpg 2x" width="280" height="280" alt="Неродные просторы">
                     </picture>
@@ -169,6 +177,8 @@
           <div class="video__player player">
             <div class="player__screen">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/video.webp 1x, img/webp/video@2x.webp 2x">
+                <source type="image/webp" srcset="img/webp/video-mobile.webp 1x, img/webp/video-mobile@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/jpg/video.jpg 1x, img/jpg/video@2x.jpg 2x">
                 <img class="player__single-picture" src="img/jpg/video-mobile.jpg" srcset="img/jpg/video-mobile@2x.jpg 2x" alt="Видеопрезентация">
               </picture>
@@ -241,6 +251,6 @@
       </footer>
     </div>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
