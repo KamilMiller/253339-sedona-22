@@ -4,10 +4,10 @@ let menu = document.querySelector('.main-nav');
 let menuToggle = document.querySelector('.main-nav__toggle');
 
 menu.classList.add('main-nav--closed');
+menu.classList.remove('main-nav--nojs');
 
 let openMenu = function () {
   menu.classList.remove('main-nav--closed');
-
 }
 
 let closeMenu = function () {

@@ -8,7 +8,11 @@
     <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon/favicon180.png">
     <link rel="manifest" href="manifest.webmanifest">
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="preload" href="fonts/ptsans.woff" as="font">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font">
+    <link rel="preload" href="fonts/ptsansbold.woff" as="font">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="page__body">
     <object style="display: none;" data="img/svg/sprite.svg" type="image/svg+xml"></object>
@@ -25,7 +29,7 @@
             </picture>
           </a>
         </div>
-        <nav class="page-header__nav main-nav">
+        <nav class="page-header__nav main-nav main-nav--nojs">
           <button class="main-nav__toggle" type="button" aria-label="Кнопка переключения состояния меню"></button>
           <ul class="main-nav__list">
             <li class="main-nav__item">
@@ -48,7 +52,7 @@
         <div class="page-main__summary summary summary--main-page">
           <div class="summary__header summary__header--main-page">
             <h1 class="visually-hidden">Седона</h1>
-            <svg class="summary__intro--main" width="282" height="214">
+            <svg class="summary__intro summary__intro--main" width="282" height="214">
               <use xlink:href="img/svg/sprite.svg#intro-index"></use>
             </svg>
           </div>
@@ -179,6 +183,6 @@
 
       </div>
 
-      <script src="js/script.js"></script>
+      <script src="js/script.min.js"></script>
   </body>
 </html>

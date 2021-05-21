@@ -101,8 +101,11 @@
 
 .photo-card__like-box {
   display: flex;
-  // align-items: center;
   min-width: 65px;
+
+  @media (min-width: @tablet-width) {
+    align-items: center;
+  }
 }
 
 .photo-card__like-button {
@@ -113,20 +116,19 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
-  opacity: 0.3;
 
   @media (min-width: @tablet-width) {
     margin-right: 10px;
   }
-
-  @media (min-width: @desktop-width) {
-    opacity: 1;
-  }
 }
 
 .photo-card__like-logo {
+  fill: @black;
+  opacity: 0.3;
+
   @media (min-width: @desktop-width) {
     fill: @white;
+    opacity: 1;
   }
 }
 
