@@ -4,6 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon/favicon180.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="fonts/ptsans.woff" as="font">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font">
+    <link rel="preload" href="fonts/ptsansbold.woff" as="font">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="page__body">
@@ -19,7 +27,7 @@
             </picture>
           </a>
         </div>
-        <nav class="page-header__nav main-nav">
+        <nav class="page-header__nav main-nav main-nav--nojs">
           <button class="main-nav__toggle" type="button" aria-label="Кнопка переключения состояния меню"></button>
           <ul class="main-nav__list">
             <li class="main-nav__item">
@@ -116,9 +124,9 @@
             <fieldset class="feedback__section feedback__section--desc">
               <div class="feedback__section-inner">
                 <div class="feedback__section-name-wrapper feedback__section-name-wrapper--desc">
-                  <h4 class="feedback__section-name feedback__section-name--desc">Опишите свои эмоции:</h4>
+                  <label class="feedback__section-name feedback__section-name--desc" for="feedback-desc">Опишите свои эмоции:</label>
                 </div>
-                <textarea class="feedback__field feedback__field--desc" name="feedback-desc" placeholder="Опишите подробно все свои восторги"></textarea>
+                <textarea class="feedback__field feedback__field--desc" name="feedback-desc" id="feedback-desc" placeholder="Опишите подробно все свои восторги"></textarea>
               </div>
             </fieldset>
             <div class="feedback__send-button-box">
