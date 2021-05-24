@@ -506,6 +506,10 @@ input[type="checkbox"]:checked + .feedback__label--visited::after {
   display: block;
 }
 
+input:focus + .feedback__label {
+  outline: 2px solid @ashen;
+}
+
 .feedback__send-button-box {
   .side-margin(auto; auto);
   width: 320px;
